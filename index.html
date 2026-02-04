@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melchert Engenharia e Automação</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <!-- <div class="logo">MELCHERT</div> -->
+            <img src="imagens/lOGO Melchert mensagem - 40x15.bmp" alt="Logo Melchert Engenharia e Automação">
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato" class="btn-nav" target="_blank">Falar conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <h1>Engenharia de Automação e <span>Indústria 4.0</span></h1>
+                <p>Projetos robustos, conformidade normativa (NR-10/NR-12) e integração de sistemas SCADA/IIoT.</p>
+                <div class="hero-buttons">
+                    <a href="#servicos" class="btn-secondary">Ver Soluções</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2 class="section-title">Soluções de Engenharia</h2>
+            <div class="services-grid">
+                <div class="card reveal">
+                    <i data-lucide="cpu"></i>
+                    <h3>Controle de Processos</h3>
+                    <p>Programação de CLPs e IHMs com lógica estruturada e alta disponibilidade.</p>
+                </div>
+                <div class="card reveal">
+                    <i data-lucide="activity"></i>
+                    <h3>Sistemas SCADA</h3>
+                    <p>Dashboards estratégicos via MQTT e Modbus para tomada de decisão em tempo real.</p>
+                </div>
+                <div class="card reveal">
+                    <i data-lucide="zap"></i>
+                    <h3>Grupos Geradores</h3>
+                    <p>Especialistas em Biogás, paralelismo e controladores DeepSea/ComAp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FORMULARIO -->
+    <section class="section" id="contato">
+        <div class="formulario-contato">
+            <h2>Solicitar Consultoria Técnica</h2>
+            <p>Descreva seu desafio e nossa engenharia entrará em contato.</p>
+
+            <form action="https://formspree.io/f/mgvzapzn" method="POST">
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome ou empresa" required>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="email">E-mail Corporativo</label>
+                        <input type="email" id="email" name="email" placeholder="email@empresa.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="tel">WhatsApp/Telefone</label>
+                        <input type="tel" id="tel" name="telefone" placeholder="(00) 00000-0000">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="servico">Área de Interesse</label>
+                    <select id="servico" name="servico">
+                        <option value="automacao">Automação Industrial / PLC</option>
+                        <option value="scada">Sistemas SCADA / Dashboards</option>
+                        <option value="geradores">Grupos Geradores / Biogás</option>
+                        <option value="outros">Outros Projetos</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="mensagem">Descrição do Projeto/Problema</label>
+                    <textarea id="mensagem" name="mensagem" rows="5"
+                        placeholder="Conte-nos brevemente sobre sua necessidade técnica..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Solicitação</button>
+                <button type="submit" id="btn-submit" class="btn-submit">Enviar para Engenharia</button>
+                <div id="form-status" style="margin-top: 15px; font-weight: bold; display: none;"></div>
+            </form>
+
+            <div class="whatsapp-direct">
+                <p>Ou se preferir, fale agora via:</p>
+                <a href="https://wa.me/5543991936853" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                    WhatsApp Direto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container">
+            <p>&copy; 2026 Melchert Engenharia e Automação</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
