@@ -21,7 +21,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 
 nav ul { display: flex; list-style: none; gap: 30px; }
 
-nav a { text-decoration: none; color: var(--dark); font-weight: 500; }
+nav a { text-decoration: none; color: var(--dark); font-weight: 800; font-family: 'Inter', sans-serif; }
 
 nav a:hover { text-decoration: underline; }
 
@@ -45,7 +45,7 @@ nav a:hover { text-decoration: underline; }
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 43, 91, 0.9), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(to right, #25d366, rgba(0, 0, 0, 0.4));
     z-index: 1;
 }
 
@@ -90,7 +90,40 @@ nav a:hover { text-decoration: underline; }
 
 .services { padding: 100px 0; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { background: white; padding: 40px; border-radius: 10px; border-bottom: 4px solid var(--secondary); box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+.card { background: white; padding: 0px 0px 40px 0px; border-radius: 10px; border-bottom: 4px solid var(--secondary); box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+
+/* Container da Imagem no Card */
+.card-img {
+    width: 100%;
+    height: 200px; /* Altura fixa para todos os cards ficarem iguais */
+    overflow: hidden;
+    border-radius: 12px 12px 0 0; /* Arredonda apenas o topo */
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    /* object-fit: contain; Ajusta a foto sem distorcer */
+    transition: transform 0.5s ease; /* Efeito suave para o hover */
+}
+
+/* Efeito de zoom técnico ao passar o mouse
+.card:hover .card-img img {
+    transform: scale(1.1);
+} */
+
+/* Espaçamento do texto abaixo da imagem */
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
 
 /* fORMULARIO */
 /* Variáveis de cores para facilitar manutenção */
@@ -242,3 +275,9 @@ nav a:hover { text-decoration: underline; }
   cursor: pointer;
   transition: 0.3s;
 }
+
+footer {
+    background: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;}
